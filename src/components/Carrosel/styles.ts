@@ -1,0 +1,48 @@
+import styled from 'styled-components';
+
+export const Post = styled.div`
+    margin: 8px 12px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px -1px #1d164d3b;
+
+        > img {
+            width: 100%;
+            margin-bottom: 12px
+        }
+
+        >div.content-post{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px;
+
+            > h4{
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+
+            >.author {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                    >p {
+                        font-size: 16px;
+                        color: var(--tertiary-color)
+                    }
+            }
+
+        }
+
+        @media (max-width: 576px){
+            >div.content-post{
+            gap: 8px;
+            padding: 8px;
+
+                > h4{
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+`
