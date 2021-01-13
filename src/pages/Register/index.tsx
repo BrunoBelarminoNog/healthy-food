@@ -44,10 +44,16 @@ export default function Register() {
     async function Registrar() {
         let users = [];
 
+        let formatCPF = cpf.replace("-", "").replace(".", "").replace(".", "");
+        
+        let validCPF = Number(formatCPF)
+
+        console.log(validCPF)
+
         const data = {
             name,
             birth,
-            cpf,
+            validCPF,
             cep,
             logradouro,
             numero,
@@ -59,18 +65,17 @@ export default function Register() {
         const schema = Yup.object().shape({
             name: Yup.string().required(),
             birth: Yup.date().required(),
-            cpf: Yup.number().required(),
+            validCPF: Yup.number().required(),
             cep: Yup.number().required(),
             logradouro: Yup.string().required(),
             numero: Yup.string().required(),
             bairro: Yup.string().required(),
             cidade: Yup.string().required(),
             estado: Yup.string().required(),
-
-
         })
 
         const valid = await schema.isValid(data)
+
 
         if(!valid) {
             alert('Por favor preencher todos os campos corretamente!')
@@ -112,11 +117,16 @@ export default function Register() {
         return true;
     }
 
+    function mascaraCpf(valor:any) {
+        return valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "\$1.\$2.\$3\-\$4");
+    }
+
     function validarCPF(cpf:any) {
-    
-        setCpf(cpf.substr(0, 11))
+        setCpf(mascaraCpf(cpf))
+
         if(cpf.length === 11) {
 
+            console.log(cpf)
             const testar = testarCPF(cpf)
 
             if (!testar) {
@@ -156,7 +166,7 @@ export default function Register() {
                         <div className="input-block">
                             <label htmlFor="cpf">CPF</label>
                             <input
-                                type="number"
+                                type="text"
                                 id="cpf"
                                 value={cpf}
                                 onChange={event => validarCPF(event.target.value)}
