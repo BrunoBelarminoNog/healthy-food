@@ -39,8 +39,35 @@ export const Container = styled.section`
         }
 
         &#blog div.carrousel {
-            width: 100vw;
+            width: 90%;
+            max-width: 1092px;
             padding-bottom: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button.slick-next, button.slick-prev {
+                border-radius: 50%;
+                padding: 2px;
+                border: none;
+                outline: none;
+                font-weight: bold;
+                transition: all 300ms;
+
+                &:hover {
+                    background-color: #d4d4d4;
+                }
+
+                i::before {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            
         }
 
         @media (max-width: 1200px) {
@@ -243,6 +270,8 @@ export const Cards = styled.div`
     gap: 36px;
 
     div.card {
+        height: 100%;
+        max-height: 250px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         background-color: #fff;

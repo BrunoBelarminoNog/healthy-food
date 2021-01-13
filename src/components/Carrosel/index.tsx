@@ -1,5 +1,4 @@
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 
 import {Post} from './styles'
@@ -12,65 +11,52 @@ import mike from '../../assets/mike.svg';
 import brian from '../../assets/brian.svg';
 import kevin from '../../assets/kevin.svg';
 
-const responsive = {
-    568: { items: 2 },
-    1024: { items: 3 },
-};
-
-const items  = [
-            <Post className="item" data-value="1">
-                <img src={blogImg1} alt="" />
-                <div className="content-post">
-                    <h4 className="custom-title">Quick-start guide to nuts and seeds</h4>
-                    <div className="author">
-                        <img src={kevin} alt="" />
-                        <p>Kevin Ibrahim</p>
-                    </div>
-                </div>
-            </Post>,
-            <Post className="item" data-value="2">
-                <img src={blogImg2} alt="" />
-                <div className="content-post">
-                    <h4 className="custom-title">Nutrition: Tips for Improving Your Health</h4>
-                    <div className="author">
-                        <img src={mike} alt="" />
-                        <p>Mike Jackson</p>
-                    </div>
-                </div>
-            </Post>,
-            <Post className="item" data-value="3" >
-                <img src={blogImg3} alt="" />
-                <div className="content-post">
-                    <h4 className="custom-title">The top 10 benefits of eating healthy</h4>
-                    <div className="author">
-                        <img src={brian} alt="" />
-                        <p>Bryan McGregor</p>
-                    </div>
-                </div>
-            </Post>,
-            <Post className="item" data-value="4" >
-                <img src={blogImg4} alt="" />
-                <div className="content-post">
-                    <h4 className="custom-title">What Makes a Healthy Diet?</h4>
-                    <div className="author">
-                        <img src={kevin} alt="" />
-                        <p>Kevin Ibrahim</p>
-                    </div>
-                </div>
-            </Post>
-
-]
 
 
 export default function Carrosel() {
+
     return (
-        <AliceCarousel
-            mouseTracking
-            items={items}
-            disableDotsControls
-            paddingLeft={150}
-            paddingRight={150}
-            responsive={responsive}
-        />
+            <>
+                <Post className="item" data-value="1">
+                    <img src={blogImg1} alt="" />
+                    <div className="content-post">
+                        <h4 className="custom-title">Quick-start guide to nuts and seeds</h4>
+                        <div className="author">
+                            <img src={kevin} alt="" />
+                            <p>Kevin Ibrahim</p>
+                        </div>
+                    </div>
+                </Post>
+                <Post className="item" data-value="2">
+                    <img src={blogImg2} alt="" />
+                    <div className="content-post">
+                        <h4 className="custom-title">Nutrition: Tips for Improving Your Health</h4>
+                        <div className="author">
+                            <img src={mike} alt="" />
+                            <p>Mike Jackson</p>
+                        </div>
+                    </div>
+                </Post>
+            <Post className="item" data-value="3" >
+                    <img src={blogImg3} alt="" />
+                    <div className="content-post">
+                        <h4 className="custom-title">The top 10 benefits of eating healthy</h4>
+                        <div className="author">
+                            <img src={brian} alt="" />
+                            <p>Bryan McGregor</p>
+                        </div>
+                    </div>
+                </Post>
+                <Post className="item" data-value="4" >
+                    <img src={blogImg4} alt="" />
+                    <div className="content-post">
+                        <h4 className="custom-title">What Makes a Healthy Diet?</h4>
+                        <div className="author">
+                            <img src={kevin} alt="" />
+                            <p>Kevin Ibrahim</p>
+                        </div>
+                    </div>
+                </Post>
+            </>
     );
 }

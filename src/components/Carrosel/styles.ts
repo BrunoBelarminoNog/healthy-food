@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Post = styled.div`
+    max-width: 300px;
     margin: 8px 12px;
     border-radius: 7px;
     box-shadow: 2px 2px 10px -1px #1d164d3b;

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import {Link, NavLink, useLocation} from 'react-router-dom';
-import { BsPersonLinesFill } from 'react-icons/bs'
 
 import { HeaderContainer, Logo, Menus} from './styles'
 
 
 export default function Header() {
-
+   
     /**** BURGUER MENU  ****/
     const [openBurger, setOpenBurger] = useState(false)
 
@@ -25,59 +24,54 @@ export default function Header() {
     }
 
     let location = useLocation().pathname
-    let className = "navbar-nav"
+    let className = ""
 
     if(location === "/register") {
-        className = "navbar-nav nav-register"
+        className = "nav-register"
     } 
     if (location === "/") {
-        className = "navbar-nav"
+        className = ""
     }
  
     return (
         <HeaderContainer>
-            <nav className="navbar navbar-expand-md">
-                <div className="container-fluid header-menu">
+            <nav>
+                <div>
                     <Link to="/" className="logo">
                         <Logo className="navbar-brand">
-                                Healthy Food
+                            Healthy Food
                         </Logo>
                     </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon">
-                            <div id="burger" className={openBurger ? "open" : "closed"} onClick={handleBurgerMenu}>
-                                <div />
-                                <div />
-                                <div />
-                            </div>
-                        </span>
-                    </button>
-                    <Menus className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className={className}>
-                            <li className="nav-item ">
-                                <NavLink to="#" className="nav-link" >
+                    <div id="burger" className={openBurger ? "open" : "closed"} onClick={handleBurgerMenu}>
+                        <div />
+                        <div />
+                        <div />
+                    </div>
+                    <div id="burguer-menu" className={openBurger ? "open" : "closed"}>
+                        <Menus className={openBurger ? "open" : "closed"} id="burguer-menu" >
+                            <div className={className}>
+                                <NavLink to="#" className="navlink " onClick={handleBurgerMenu}>
                                     Healthy Recipes
                                 </NavLink>
-                            </li>
-                            <li className="nav-item ">
-                                <NavLink to="#" className="nav-link" >
+                                <NavLink to="#" className="navlink " onClick={handleBurgerMenu}>
                                     Blog
                                 </NavLink>
-                            </li>
-                            <li className="nav-item ">
-                                <NavLink to="#" className="nav-link" >
+                                <NavLink to="#" className="navlink " onClick={handleBurgerMenu}>
                                     Join
                                 </NavLink>
-                            </li>
-                            <li className="nav-item ">
-                                <NavLink to="/register" className="nav-link btn btn-light register">
+                                <NavLink to="/register" className="navlink btn btn-light register" onClick={handleBurgerMenu}>
                                     Register
                                 </NavLink>
-                            </li>
-                        </ul>
-                    </Menus>
+                            </div>
+                        </Menus>
+                    </div>
                 </div>
             </nav>
+
         </HeaderContainer>
     )
 }
+
+
+
+
