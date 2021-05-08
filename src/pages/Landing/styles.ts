@@ -91,6 +91,7 @@ export const Container = styled.section`
                 width: 100%;
                 object-fit: cover;
                 height: unset;
+                z-index: 3;
             }
                 
         }
@@ -117,6 +118,7 @@ export const Headline = styled.div`
     width: 412px;
     display: flex;
     flex-direction: column;
+    z-index: 4;
 
         > h1 {
             font-size: 48px;
@@ -206,6 +208,7 @@ export const TitleWrapper = styled.div`
         &.content-services {
             width: 420px;
             text-align: left;
+            z-index: 4;
 
                 > h2 {
                     margin-bottom: 32px;
@@ -219,6 +222,7 @@ export const TitleWrapper = styled.div`
         &.join-content {
             width: 420px;
             text-align: left;
+            z-index: 4;
         }
 
         @media (max-width: 1200px) {
@@ -245,6 +249,8 @@ export const TitleWrapper = styled.div`
             &.join-content {
                 width: 100%;
                 padding-left: 24px;
+                position: relative;
+                z-index: 5;
 
                 > #form-join {
                     padding: 0;

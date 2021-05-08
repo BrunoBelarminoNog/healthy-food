@@ -1,46 +1,119 @@
-# Getting Started with Create React App
+<p align="center">
+  <img alt="Healthy Food" src="./src/assets/healthyfood.png" width="400px" />
+</p>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr>
+<br>
 
-## Available Scripts
+<h2 align="center">
+  Landing Page: Healthy Food
+</h2>
+<br>
 
-In the project directory, you can run:
+<blockquote align="center">“Os empreendedores falham, em média, 3,8 vezes antes do sucesso final. O que separa os bem-sucedidos dos outros é a persistência” – Lisa M. Amos, executiva</blockquote>
+<br>
 
-### `yarn start`
+<p align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="LICENSE">
+    <img alt="LICENSE" src="https://img.shields.io/npm/l/express">
+  </a>
+  <a href="NPM">
+    <img alt="NPM" src="https://img.shields.io/npm/v/npm">
+  </a>
+  <a href="GitHub followers">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/BrunoBelarminoNog?style=social">
+  </a>
+</p>
+<hr>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- <p align="center">
+  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#art-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#books-sobre o Bootcamp">Sobre o Bootcamp</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#pushpin-contribuindo">Contribuindo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#unlock-licença">Licença</a>
+</p> -->
 
-### `yarn test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :rocket: Sobre o projeto
 
-### `yarn build`
+O Healthy Food é um protótipo de landing page de uma plataforma sobre alimentação saudável. Criado em ReactJS com Typescript, e adaptável para todas as telas.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :computer: Tecnologias utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A seguinte stack foi utilizada na construção do projeto:
 
-### `yarn eject`
+- ReactJS
+- Typescript
+- Styled Components
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :construction_worker: Instalação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Primeiramente você precisa ter instalado o [Node.js](https://nodejs.org/en/download/), depois efetuar o clone deste repositório a partir do seguinte comando:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+git clone https://github.com/BrunoBelarminoNog/healthy-food.git
+```
 
-## Learn More
+URLs SSH fornecem acesso a um repositório Git via SSH, um protocolo seguro. Se você tiver uma chave SSH registrada em
+sua conta do Github, clone o projeto usando este comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone git@github.com:BrunoBelarminoNog/healthy-food.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Instale as dependências**
+
+```
+yarn
+ou
+npm install
+```
+
+**Inicie o servidor**
+
+```
+npm start
+```
+
+<br>
+
+## :runner: Let's start
+
+**Register**
+
+A rota '/register' conta com um formulário inteligente, em validação de CPF e CEP, com auto complementar do endereço após digitação do CEP realizada por API dos Correios.
+
+<br>
+
+# :art: Layout
+
+<p align="center" display="flex" >
+  <img src="./src/assets/healthyfood-mobile.png" alt="Healthy Food Mobile" width="200px" />
+  <img src="./src/assets/healthyfood-home.png" alt="Healthy Food desktop" width="300px" />
+</p>
+<p align="center">
+  <img src="./src/assets/healthyfood-2.png" alt="Healthy Food Register" width="400px" />
+
+</p>
+
+# :pushpin: Contribuindo
+
+Sinta-se à vontade para registrar um novo problema com o respectivo título e descrição no repositório Foodfy . Se você já encontrou uma solução para o problema, eu adoraria revisar sua solicitação de pull!
+
+Verifique a página de contribuição para ver os melhores lugares para registrar problemas, iniciar discussões e começar a contribuir.
+
+# :unlock: Licença
+
+Lançado em 2021. Este projeto está sob a licença do MIT .
+
+Feito com muita dedicação por Bruno Belarmino :zap:
+
+Me siga nas redes! [LinkdIn](https://www.linkedin.com/in/bruno-belarmino-nog/)

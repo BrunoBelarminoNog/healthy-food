@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import * as Yup from 'yup';
 
 
@@ -15,6 +15,8 @@ export default function Register() {
     const [bairro, setBairro] = useState("")
     const [cidade, setCidade] = useState("")
     const [estado, setEstado] = useState("")
+
+    const inputAddressNumber = useRef<HTMLInputElement>(null)
 
     async function getAddres(valor:string) {
         let cep = valor.replace(/\D/g, '');
@@ -36,8 +38,7 @@ export default function Register() {
                     setEstado(address.uf)
                 })
 
-            $('#numero').focus()
-            
+                inputAddressNumber.current && inputAddressNumber.current.focus()
         }
     }
 
@@ -202,6 +203,7 @@ export default function Register() {
                             type="text"
                             value={numero}
                             onChange={event => setNumero(event.target.value)}
+                            ref={inputAddressNumber}
                         />
                     </div>
 
