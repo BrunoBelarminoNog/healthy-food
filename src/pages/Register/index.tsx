@@ -119,7 +119,7 @@ export default function Register() {
     }
 
     function mascaraCpf(valor:any) {
-        return valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "\$1.\$2.\$3\-\$4");
+        return valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "$1.$2.$3-$4");
     }
 
     function validarCPF(cpf:any) {
