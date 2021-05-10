@@ -89,7 +89,7 @@ npm start
 
 **Register**
 
-A rota '/register' conta com um formulário inteligente, em validação de CPF e CEP, com auto complementar do endereço após digitação do CEP realizada por API dos Correios.
+A rota '/register' conta com um formulário inteligente, em validação de CPF e CEP, com auto completar do endereço após digitação do CEP realizada por API dos Correios.
 
 <br>
 
@@ -106,7 +106,7 @@ A rota '/register' conta com um formulário inteligente, em validação de CPF e
 
 # :pushpin: Contribuindo
 
-Sinta-se à vontade para registrar um novo problema com o respectivo título e descrição no repositório Foodfy . Se você já encontrou uma solução para o problema, eu adoraria revisar sua solicitação de pull!
+Sinta-se à vontade para registrar um novo problema com o respectivo título e descrição no repositório Healthy Food. Se você já encontrou uma solução para o problema, eu adoraria revisar sua solicitação de pull!
 
 Verifique a página de contribuição para ver os melhores lugares para registrar problemas, iniciar discussões e começar a contribuir.
 
