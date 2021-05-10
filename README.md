@@ -72,15 +72,13 @@ git clone git@github.com:BrunoBelarminoNog/healthy-food.git
 **Instale as dependências**
 
 ```
-yarn
-ou
-npm install
+yarn || npm install
 ```
 
 **Inicie o servidor**
 
 ```
-npm start
+yarn start || npm run start
 ```
 
 <br>
